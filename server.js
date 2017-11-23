@@ -7,8 +7,6 @@ http.createServer(function(request, response) {
     var u = url.parse(request.url, true);
   
     if (u.path.indexOf('/secure') == 0) {
-        console.log(u.query);
-
         var statusCode = 200;
 
         if (u.query.pass === '1234'){
